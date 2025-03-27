@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Pos?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mpp2025.controller.TripController">
+    <children>
+        <!-- Căutare -->
+        <Label text="Enter Tourist Attraction:" layoutX="50.0" layoutY="20.0"/>
+        <TextField fx:id="txtTouristAttraction" layoutX="200.0" layoutY="20.0"/>
+
+        <Label text="Start Hour:" layoutX="50.0" layoutY="60.0"/>
+        <TextField fx:id="txtStartHour" layoutX="200.0" layoutY="60.0"/>
+
+        <Label text="End Hour:" layoutX="50.0" layoutY="100.0"/>
+        <TextField fx:id="txtEndHour" layoutX="200.0" layoutY="100.0"/>
+
+        <Label text="Select Date:" layoutX="50.0" layoutY="140.0"/>
+        <DatePicker fx:id="datePicker" layoutX="200.0" layoutY="140.0"/>
+
+        <!-- Buton de Căutare -->
+        <Button text="Search Trips" layoutX="200.0" layoutY="180.0" onAction="#searchTrips"/>
+
+        <!-- Tabel pentru rezultate -->
+        <TableView fx:id="tripsTable" layoutX="50.0" layoutY="240.0">
+            <columns>
+                <TableColumn fx:id="touristAttractionColumn" text="Tourist Attraction"/>
+                <TableColumn fx:id="transportCompanyColumn" text="Transport Company"/>
+                <TableColumn fx:id="departureTimeColumn" text="Departure Time"/>
+                <TableColumn fx:id="priceColumn" text="Price"/>
+                <TableColumn fx:id="availableSeatsColumn" text="Available Seats"/>
+            </columns>
+        </TableView>
+
+        <!-- Câmpuri pentru rezervare -->
+        <Label text="Client Name:" layoutX="50.0" layoutY="380.0"/>
+        <TextField fx:id="clientNameField" layoutX="200.0" layoutY="380.0"/>
+
+        <Label text="Client Phone:" layoutX="50.0" layoutY="420.0"/>
+        <TextField fx:id="clientPhoneField" layoutX="200.0" layoutY="420.0"/>
+
+        <Label text="Number of Tickets:" layoutX="50.0" layoutY="460.0"/>
+        <TextField fx:id="ticketCountField" layoutX="200.0" layoutY="460.0"/>
+
+        <!-- Buton pentru rezervare -->
+        <Button text="Reserve" layoutX="200.0" layoutY="500.0" onAction="#makeReservation"/>
+        <Button text="Logout" layoutX="200.0" layoutY="550.0" onAction="#logout"/>
+    </children>
+</AnchorPane>
