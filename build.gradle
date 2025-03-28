@@ -36,7 +36,7 @@ dependencies {
 
 run {
     jvmArgs = [
-            '--module-path', 'C:\\Users\\Alexandra\\javafx-sdk-24\\lib', // Update with path to your JavaFX SDK lib directory
+            '--module-path', 
             '--add-modules', 'javafx.controls,javafx.fxml'
     ]
 }
